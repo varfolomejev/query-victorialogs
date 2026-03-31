@@ -1,0 +1,93 @@
+{
+  "name": "query-victorialogs",
+  "version": "1.0.0",
+  "description": "Query and analyze logs from VictoriaLogs using LogsQL via HTTP API",
+  "author": "ihorvarfolomeiev",
+  "license": "MIT",
+  "repository": "https://github.com/ihorvarfolomeiev/query-victorialogs",
+  "keywords": [
+    "victorialogs",
+    "logs",
+    "logsql",
+    "observability",
+    "monitoring",
+    "debugging",
+    "troubleshooting",
+    "log-analysis",
+    "victoria-metrics"
+  ],
+  "categories": [
+    "observability",
+    "logs",
+    "devops"
+  ],
+  "triggers": [
+    "query logs",
+    "search logs",
+    "check VictoriaLogs",
+    "find errors in logs",
+    "tail logs",
+    "get log stats",
+    "search VictoriaLogs",
+    "check dev/prod logs",
+    "LogsQL",
+    "log investigation",
+    "log troubleshooting"
+  ],
+  "mainPrompt": "SKILL.md",
+  "references": [
+    "references/logsql-reference.md",
+    "references/http-api.md"
+  ],
+  "scripts": [
+    "scripts/vl-query.sh",
+    "scripts/vl-hits.sh"
+  ],
+  "requirements": {
+    "external": [
+      "curl"
+    ],
+    "environment": [
+      "VL_DEV_URL",
+      "VL_PROD_URL"
+    ]
+  },
+  "configuration": {
+    "projectFile": "CLAUDE.md",
+    "requiredVariables": [
+      "VL_DEV_URL",
+      "VL_PROD_URL"
+    ],
+    "example": {
+      "CLAUDE.md": "## VictoriaLogs\n\n- **DEV**: `http://<your-dev-host>:9428`\n- **PROD**: `http://<your-prod-host>:9428`\n\nDefault to DEV unless user explicitly says \"prod\" or \"production\"."
+    }
+  },
+  "features": [
+    "Query logs using LogsQL syntax",
+    "Search for errors and patterns across services",
+    "Get hit counts and histograms",
+    "Discover fields, streams, and field values",
+    "Safe time range handling (max 3 hours)",
+    "Two-step date-based search (hits then query)",
+    "Multi-environment support (DEV/PROD)",
+    "Full LogsQL pipe and stats function support"
+  ],
+  "limitations": [
+    "Maximum 3-hour query time range to prevent server overload",
+    "Requires VictoriaLogs server access",
+    "SSL verification disabled (--insecure flag required)"
+  ],
+  "usageExamples": [
+    "search logs for errors in last 5 minutes",
+    "find logs matching user ID u-12345 on prod",
+    "check what happened on March 20 around the deployment",
+    "get error rate per service in the last hour",
+    "tail dev logs for connection refused"
+  ],
+  "metadata": {
+    "minClaudeCodeVersion": "1.0.0",
+    "tested": true,
+    "status": "stable",
+    "lastUpdated": "2026-03-25"
+  }
+}
