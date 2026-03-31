@@ -1,6 +1,8 @@
 # query-victorialogs
 
-A [Claude Code](https://docs.anthropic.com/en/docs/claude-code) skill for querying and analyzing logs from [VictoriaLogs](https://docs.victoriametrics.com/victorialogs/) using LogsQL via HTTP API.
+A skill for querying and analyzing logs from [VictoriaLogs](https://docs.victoriametrics.com/victorialogs/) using LogsQL via HTTP API.
+
+**Compatible with:** Claude Code, Codex, and other AI coding tools that support the universal SKILL.md format.
 
 ## What It Does
 
@@ -50,6 +52,8 @@ Once installed, just ask Claude Code in natural language:
 ```
 query-victorialogs/
 ├── SKILL.md                      # Main skill instructions
+├── skill.json                    # CCPM/Claude Code metadata
+├── .skillfish.json               # Codex compatibility metadata
 ├── references/
 │   ├── logsql-reference.md       # Full LogsQL syntax (filters, pipes, stats)
 │   └── http-api.md               # HTTP API endpoints reference

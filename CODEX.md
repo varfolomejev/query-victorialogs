@@ -64,7 +64,8 @@ A Claude Code skill that enables natural language querying and analysis of logs 
 ### File Structure
 ```
 query-victorialogs/
-├── skill.json              # Metadata for CCPM registry
+├── skill.json              # Metadata for CCPM registry (Claude Code)
+├── .skillfish.json         # Metadata for Codex compatibility
 ├── SKILL.md                # Main prompt instructions
 ├── README.md               # User-facing documentation
 ├── LICENSE                 # MIT license
